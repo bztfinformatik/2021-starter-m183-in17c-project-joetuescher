@@ -1,10 +1,12 @@
 const token = require("jsonwebtoken");
-const User = require("../models/user");
 const c = require("../util/const");
 const helper = require("../util/helper");
-
-
 const logger = require("../util/log");
+
+
+const User = require("../models/user");
+const Posting = require("../models/posting");
+
 
 
 exports.getHelloWorld = (req, res, next) => {
@@ -83,4 +85,40 @@ exports.getUsers = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.getPostings = async (req, res, next) => 
+{
+  try 
+  {
+    let result = new Array(0);
+    if(helper.isEmpty(req.query))
+    {
+      result = await Posting.getByIds(req.params.ids);
+    }
+    else
+    {
+      try
+      {
+        result = await Posting.filter(req.query);
+      }
+      catch(err)
+      {
+        if(err.errno != c.ERR_DB_UNKONW_COLUMN)
+        {
+          throw err;
+        }
+      }
+    }
+    res.status(200).json(result);
+  }
+  catch(err)
+  {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+
+  }
+
+}
 
