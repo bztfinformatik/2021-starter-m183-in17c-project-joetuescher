@@ -1,4 +1,6 @@
 const mysql = require("mysql2");
+const logger = require("./log");
+
 
 const connectionPool = mysql.createPool({
   host: process.env.NODE_DBHOST,
@@ -8,11 +10,18 @@ const connectionPool = mysql.createPool({
 });
 
 async function execute(sql, values, connection) {
+  if (logger.levels[process.env.NODE_LOGLEVEL] >= logger.levels.verbose) {
     const formatedSql = connection.format(sql, values);
+    logger.debug("Executing SQL", {
+      sql: formatedSql,
+    });
     const result = await connection.execute(formatedSql);
+    logger.debug("Result of SQL query", {result: JSON.stringify(result[0])});
     return result;
+  } else {
+    return await connection.execute(sql, values);
+  }
 }
-
 
 async function get(stmt) {
   const connection = connectionPool.promise();

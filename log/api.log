@@ -1,0 +1,110 @@
+{
+  level: 'info',
+  message: 'logger initialized!',
+  timestamp: '2021-02-24T09:59:13.253Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T09:59:45.185Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T09:59:45.186Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T09:59:54.506Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T09:59:54.507Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T10:00:42.186Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:00:42.188Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T10:00:51.139Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:00:51.140Z'
+}
+{
+  level: 'info',
+  message: 'logger initialized!',
+  timestamp: '2021-02-24T10:01:10.480Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T10:01:13.277Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:01:13.278Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T10:02:20.730Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:02:20.731Z'
+}
+{
+  level: 'info',
+  message: 'logger initialized!',
+  timestamp: '2021-02-24T10:02:28.059Z'
+}
+{
+  level: 'info',
+  message: 'nice',
+  timestamp: '2021-02-24T10:02:35.261Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:02:35.262Z'
+}
+{
+  level: 'info',
+  message: 'logger initialized!',
+  timestamp: '2021-02-24T10:03:32.573Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:03:34.843Z'
+}
+{
+  level: 'info',
+  message: 'logger initialized!',
+  timestamp: '2021-02-24T10:06:29.497Z'
+}
+{
+  level: 'info',
+  message: 'logger initialized!',
+  timestamp: '2021-02-24T10:09:07.503Z'
+}
+{
+  level: 'error',
+  message: 'only test',
+  timestamp: '2021-02-24T10:10:00.554Z'
+}

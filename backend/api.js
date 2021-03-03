@@ -2,7 +2,6 @@
 
 //load environment
 require('dotenv').config();
-
 // module for handling http requests and responses and managing routes
 const express = require('express');
 // module for parsing (json-)requests
@@ -12,6 +11,8 @@ const path = require('path');
 
 // importing self-developed moudules
 const routes = require('./routes/main');
+const { loggers } = require('winston');
+const logger = require('./util/log');
 
 const api = express();
 
@@ -40,6 +41,10 @@ api.use((req, res, next) => {
 
 // error handler sends error message as json
 api.use((err, req, res, next) => {
+  logger.error(err.message, {
+    errno: err.errno,
+    error: err,
+  });
   res.status(err.statusCode).json(
     {
       errorMessage: err.message

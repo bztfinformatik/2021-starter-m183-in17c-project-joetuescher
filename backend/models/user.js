@@ -24,7 +24,7 @@ module.exports = class User {
 
     const values = [firstname, lastname, username, pwd, avatar];
 
-    await db.set([{ sql: sql, values: values }]);
+    return await db.set([{ sql: sql, values: values }]);
   }
 
   static async filter(query) {
