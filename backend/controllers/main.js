@@ -54,9 +54,11 @@ exports.addUser = async (req, res, next) =>
   {
     if(err.errno == 1062) // error code if the key already exists 
     {
+      err.statusCode = 409; //conflict
       err.message = "User already exists";
     }
-    if (!err.statusCode) {
+    else if (!err.statusCode) 
+    {
       err.statusCode = 500;
     }
     next(err);
